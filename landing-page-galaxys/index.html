@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galaxys</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section>
+      <header>
+        <a href="#" class="logo">Galaxys</a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="navigation">
+          <li><a href="#" style="--i: 1">Home</a></li>
+          <li><a href="#" style="--i: 2">Space</a></li>
+          <li><a href="#" style="--i: 3">Stars</a></li>
+          <li><a href="#" style="--i: 4">Planets</a></li>
+          <li><a href="#" style="--i: 5">More</a></li>
+        </ul>
+      </header>
+      <div class="container">
+        <div class="box" style="--i: 3">
+          <div class="imgBox">
+            <img src="./img/img1.jpg" />
+          </div>
+        </div>
+
+        <div class="box" style="--i: 4">
+          <div class="imgBox">
+            <img src="./img/img2.jpg" />
+          </div>
+        </div>
+
+        <div class="box" style="--i: 5">
+          <div class="imgBox">
+            <img src="./img/img3.jpg" />
+          </div>
+        </div>
+
+        <div class="box" style="--i: 6">
+          <div class="imgBox">
+            <img src="./img/img4.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <ul class="sci">
+          <li style="--i: 9"><a href="#">Facebook</a></li>
+          <li style="--i: 8"><a href="#">Twitter</a></li>
+          <li style="--i: 7"><a href="#">LinkedIn</a></li>
+        </ul>
+        <p class="copyrightText">Samuel Alves - 2021</p>
+      </div>
+    </section>
+
+    <script>
+      let imgBox = document.querySelectorAll(".imgBox");
+      imgBox.forEach((popup) =>
+        popup.addEventListener("click", () => {
+          popup.classList.toggle("active");
+        })
+      );
+      function toggleMenu() {
+        const menuToggle = document.querySelector(".toggle");
+        const navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
